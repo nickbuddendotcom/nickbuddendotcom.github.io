@@ -314,32 +314,6 @@ button {
     src: url("../fonts/quicksand_bold/quicksand_bold.svg#Quicksand") format('svg');
   }
 }
-@font-face {
-  font-family: 'PT Sans';
-  src: url("../fonts/pt-sans/pt-sans.eot");
-  src: url("../fonts/pt-sans/pt-sans.eot?#iefix") format('embedded-opentype'), url("../fonts/pt-sans/pt-sans.woff") format('woff'), url("../fonts/pt-sans/pt-sans.ttf") format('truetype'), url("../fonts/pt-sans/pt-sans.svg#PT Sans") format('svg');
-  font-weight: 'normal';
-  font-style: normal;
-}
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: 'PT Sans';
-    src: url("../fonts/pt-sans/pt-sans.svg#PT Sans") format('svg');
-  }
-}
-@font-face {
-  font-family: 'PT Sans Bold';
-  src: url("../fonts/pt-sans-bold/pt-sans-bold.eot");
-  src: url("../fonts/pt-sans-bold/pt-sans-bold.eot?#iefix") format('embedded-opentype'), url("../fonts/pt-sans-bold/pt-sans-bold.woff") format('woff'), url("../fonts/pt-sans-bold/pt-sans-bold.ttf") format('truetype'), url("../fonts/pt-sans-bold/pt-sans-bold.svg#PT Sans Bold") format('svg');
-  font-weight: 'normal';
-  font-style: normal;
-}
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: 'PT Sans Bold';
-    src: url("../fonts/pt-sans-bold/pt-sans-bold.svg#PT Sans Bold") format('svg');
-  }
-}
 /* -------------------------------------------------------------- */
 /* [ COMMON ] */
 /* -------------------------------------------------------------- */
@@ -348,10 +322,10 @@ body {
   height: 100%;
 }
 body {
-  font-family: 'Pt Sans', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
   -webkit-font-smoothing: antialiased;
   background: #f4f4f4;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 180%;
   font-weight: normal;
   color: #464646;
@@ -442,7 +416,9 @@ h5,
 h6 {
   font-size: 17px;
 }
-p a {
+p a,
+li a,
+ol a {
   color: #82d145;
   border-bottom: 1px dashed #d3d3d3;
   -webkit-transition: all 0.3s ease-out;
@@ -450,8 +426,11 @@ p a {
   -o-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+  font-weight: bold;
 }
-p a:hover {
+p a:hover,
+li a:hover,
+ol a:hover {
   border-bottom: 1px solid #82d145;
 }
 .site_nav ul,
@@ -744,11 +723,14 @@ aside .tags a {
   color: #6d6d6d;
 }
 .post_content > * {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .post_content em {
   font-style: italic;
-  color: #000;
+}
+.post_content small {
+  font-size: 12px;
+  line-height: 12px;
 }
 .post_content strong {
   font-weight: bold;
